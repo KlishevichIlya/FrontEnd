@@ -1,18 +1,53 @@
-ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    
-    overflow: hidden;
+header{
+    display: flex;    
     background-color: #333;
 }
 
-li{
+body {
+    margin: 0;
+}
+
+.header-logo {
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 40px;
+    height: 40px;
+    background-image: url('images/logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    align-self: center;
+}
+
+#portfolio{
+    display: flex;
+    color: white;    
+    margin-left: 40px;
+    align-items: flex-end;
+    height: 50px;
+    
+    background-image: url('images/portfolio.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    
+    
+}
+
+
+header ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+header li{
     float: left;
     border-right: 1px solid #bbb;
 }
 
-li a {
+header li a {
     display: block;
     color: white;
     text-align: center;
@@ -20,11 +55,13 @@ li a {
     text-decoration: none;
 }
 
-li a:hover{
+header li a:hover{
     background-color: #111;
 }
 
-
+#main-nav-item{
+    margin-left: 150px;
+}
 
 #logout-nav-item {
     float: right;
