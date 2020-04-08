@@ -1,5 +1,5 @@
 header{
-    display: flex;    
+    display: flex;  
     background-color: #333;
 }
 
@@ -16,22 +16,28 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 40px 40px;
-    align-self: center;
+    align-self: center; 
+    
 }
 
-#portfolio{
-    display: flex;
-    color: white;    
-    margin-left: 40px;
-    align-items: flex-end;
-    height: 50px;
-    
+#portfolio{   
+
+    height: 50px;    
     background-image: url('images/portfolio.png');
-    background-position: top;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 40px 40px; 
+        
+}
+
+#exit{     
+
+    height: 47px;    
+    background-image: url('images/exit.png');
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: 40px 40px;
-    
-    
+
 }
 
 
@@ -43,8 +49,9 @@ header ul{
 }
 
 header li{
-    float: left;
+    float: left;    
     border-right: 1px solid #bbb;
+    border-left: 1px solid #bbb;
 }
 
 header li a {
@@ -66,3 +73,31 @@ header li a:hover{
 #logout-nav-item {
     float: right;
 }
+aside{  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 70px;
+    margin-left: 30px;
+    background: #f0f0f0;
+    padding: 10px;
+    width: 250px;
+    height: 300px;
+    float: left;
+}
+aside p{ 
+    text-align: center;
+}
+
+aside div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+.circle{    
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
