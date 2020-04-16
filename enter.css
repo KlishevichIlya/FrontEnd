@@ -1,0 +1,136 @@
+body{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form{	
+	width: 500px;
+	height: 400px;
+	padding: 32px;
+	border-radius: 30px;
+	box-shadow: 0 3px 90px #ccc;
+	font-family: sans-serif;
+	letter-spacing: 1px;
+	background: linear-gradient(to top left, powderblue, pink);
+}
+.maintext{
+	text-align: center;
+	margin: 10px 5px 15px 20px;
+	font-weight: normal;
+	font-family: sans-serif;
+	
+
+}
+.button{
+	display: block;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 50px;
+	font-family: sans-serif;
+	letter-spacing: 1px;
+	font-size: 16px;
+	color :#fff;
+	background-color: #0071f0;
+	outline: none;
+	cursor: pointer;	
+	margin:0 auto;
+	margin-top: 50px
+}
+.box{
+	position: relative;
+	width: 200px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+.input{
+	width: 100%;
+    padding: 0 0 10px 0;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: transparent;
+    outline: none;
+
+}
+.label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #9e9e9e;
+}
+.button:focus,
+.button:hover{
+	background-color: #79afe8;
+}
+.input:focus{
+	border-bottom: 1px solid #1a73a8;
+}
+.input:focus ~ .label,
+.input:not(:focus) ~ .label{
+	top: -18px;
+    font-size:12px;
+    color: #6f8ee8;
+}
+/*.maintext{
+	margin: 50px auto;
+	
+  	padding: 50px 20px;
+    text-align: center;
+    width: 550px;
+    height: 500px;
+   
+   
+}
+
+.maintext h1{
+	font-weight: normal;
+  	font-family: 'Merriweather', serif;
+  	position: relative;
+  	display: inline-block;
+  	margin: 0;
+  	line-height: 1;
+ 	color: #F7844E;
+  	font-size: 30px;
+  	padding: .4em 1em .55em;
+}
+.maintext h1:before,
+.maintext h1:after{
+	content: ""; 
+  	position: absolute;
+  	width: 60%;
+  	height: .1em;
+  	background: #294200; 
+}
+.maintext h1:before {
+  left: 0;
+  top: 0;
+}
+.maintext h1:after {
+  right: 0;
+  bottom: 0;
+}
+.maintext h1 span:before,
+.maintext h1 span:after {
+  content: ""; 
+  position: absolute;
+  width: .65em;
+  height: .65em;
+  border: .1em solid #294200;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.maintext h1 span:before {
+  top: -.55em;
+  left: -.325em;
+}
+.maintext h1 span:after {
+  bottom: -.55em;
+  right: -.325em;
+}
+@media (max-width: 600px) {
+  .six h1 {font-size: 2em;}
+}
+@media (max-width: 450px) {
+  .six h1 {font-size: 1.5em;}
+}*/
