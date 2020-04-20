@@ -124,7 +124,58 @@ main{
 
 
 }
-main div{
+.portfolios{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box{
+    list-style-type: none;
+    margin-top: 25px;
+    margin-left: 25px;   
+    background: linear-gradient(90deg, #b9deed, #efefef);
+    width: 150px;
+    height: 200px;
+    /*border: 1px solid green;*/
+    /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+    box-shadow: 0 0 20px #a3a3a3;
+    border-radius: 10px 10px 10px 10px;
+    
+}
+/*.creator{
+     
+     background-image: url('images/add.png');
+     background-position: center;
+     background-size: 40px 40px;
+     background-repeat: no-repeat;
+     
+     
+     
+} */
+.creator-link{
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 10px 10px;
+    
+    
+
+    /*border: 1px solid red;*/
+}
+/*.creator-link:hover{
+     background-color: #80c8ff;
+}*/
+ .content{
+  position: absolute;
+  margin-top: 140px;
+  width: 150px;
+  height: 110px;  
+}
+
+
+
+/*main div{
     margin-top: 25px;
     margin-left: 25px;   
     background: #f0f0f0;
@@ -138,8 +189,9 @@ main div{
      background-size: 40px 40px;
      background-repeat: no-repeat;
      position: relative;
-} 
-.creator-link{
+} */
+
+/*.creator-link{
     position: absolute;
     top: 0;
     bottom: 0;
@@ -155,7 +207,7 @@ main div:hover{
     background-size: 40px 40px;
     background-repeat: no-repeat;
     position: relative;
-}
+}*/
 .main-phrase {
   margin-top: 15px;
   margin-left: 350px;
