@@ -10,7 +10,7 @@ body {
   flex-direction: column;
   min-width: 1230px;
   min-height: 1000px;
-
+ 
 }
 
 .header-logo {
@@ -314,4 +314,50 @@ footer{
   width: 50px;
   height: 50px;
   align-items: center;
+}
+
+.edit-body{
+  background: #b9deed;
+}
+
+.edit-main{
+  width: 1000px;
+  height: 600px;
+  margin:0 auto;
+  margin-top: 50px;
+  background: #ffffff;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.edit-phrase{
+  padding: 50px 20px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.edit-phrase h1{
+  font-family: 'Merriweather', serif;
+  color: #cd4a4c;
+  position: relative;
+  font-size: 3em;
+  font-weight: normal;
+  line-height: 1;
+  padding: 10px 0;
+  margin: 0;
+  display: inline-block;
+}
+
+.edit-phrase h1:before{
+  content: ""; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  height: 200%;
+  border-radius: 50%/30%;
+  border: 6px solid #cd4a4c;
+  border-left-color: transparent;
+  border-right-color: transparent;
 }
