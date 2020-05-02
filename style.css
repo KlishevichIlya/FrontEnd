@@ -1,12 +1,16 @@
+
 header{
     display: flex;
-    background-color: #333;       
+    background-color: #333;     
+          
 }
 
 body {
   display: flex; 
   flex-direction: column;
-  margin: 0;
+  min-width: 1230px;
+  min-height: 1000px;
+
 }
 
 .header-logo {
@@ -75,6 +79,7 @@ header li a:hover{
 .container{
   display: flex;
   justify-content: row;
+  height: 700px;
 }
 
 
@@ -126,10 +131,12 @@ main{
 .portfolios{
   display: flex;
   flex-wrap: wrap;
+  width: 95%;
+  height: 100%;
 }
 
 .without-list-type{
-  list-style-type: none;  
+  list-style-type: none;    
 }
 .without-text-decoration{
   text-decoration: none;
@@ -137,11 +144,12 @@ main{
 
 .card-create{  
   position: relative;
-  margin-top: 25px;
-  margin-left: 25px;   
+  margin-top: 35px;
+  margin-left: 45px;   
+  margin-right: 60px;
   background: linear-gradient(90deg, #b9deed, #efefef);
-  width: 225px;
-  height: 150px;    
+  width: 265px;
+  height: 180px;    
   box-shadow: 0 0 20px #a3a3a3;
   border-radius: 10px 10px 10px 10px;
   overflow: hidden;
@@ -171,14 +179,15 @@ main{
 
 .card-info{
   display: grid;
-  margin-top: 25px;
-  margin-left: 25px;  
+  margin-top: 35px;
+  margin-left: 45px;  
+  margin-right: 60px;
   background: linear-gradient(90deg, #b9deed, #efefef);
-  width: 225px;
-  height: 150px;
+  width: 265px;
+  height: 180px;
   border-radius: 10px 10px 10px 10px; 
   overflow: hidden;
-  grid-template-columns: 60px 165px;
+  grid-template-columns: 80px 185px;
   grid-template-rows: 25% 25% 50%;
   grid-template-areas: 
   'img name'
@@ -191,27 +200,26 @@ main{
 }
 .item-img{
   grid-area: img;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   justify-self: center;
   align-self: center;
   object-fit: cover;
 }
-.clip{
+.ellipsis{
   width: 155px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: clip;
+  text-overflow: ellipsis;
 }
 .item-name{
   grid-area: name;
   justify-self: center;
-  align-self: end;
+  align-self: center;
   text-decoration: underline;
-  overflow: hidden; 
-
-}
+   
+  }
 
 .item-date{
   margin:0;
@@ -258,7 +266,7 @@ main{
 
 .main-phrase {
   margin-top: 15px;
-  margin-left: 350px;
+  margin-left: 30%;
   background: linear-gradient(to top left, powderblue, pink);
   border-radius: 30px;
   width: 800px;
@@ -294,6 +302,7 @@ main{
 
 footer{
   display: flex;
+
   height: 75px;
   width: 100%;
   border-top: 1px solid #e6948a;
