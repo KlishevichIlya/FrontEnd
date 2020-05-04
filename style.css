@@ -9,7 +9,7 @@ body {
   display: flex; 
   flex-direction: column;
   min-width: 1230px;
-  min-height: 1000px;
+  
  
 }
 
@@ -458,4 +458,89 @@ footer{
 }
 .form_toggle .item-2 input[type=radio]:checked + label {
   background: #bbffbb;
+}
+
+.edit-forms-exp{
+  width: 80%;
+  height: 30%;
+  border: 2px solid #ccc;
+  margin: 0 auto;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0 4px 16px #ccc;  
+}
+.edit-fe-div{
+  position: relative;
+  width: 80%;
+  height: 10%;  
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.edit-fe-label{
+  display:inline-block;
+  top: -18px;
+  font-size:17px;
+  color: #cd4a4c;
+  width: 230px;
+  margin-right: 50px;
+
+}
+.edit-fe-select{
+
+  height: 30px;
+  width: 85px;
+}
+.edit-fe-input{
+  margin: 0;
+  padding: 0;
+  height: 26px;
+  width: 81px;
+}
+.edit-fe-textarea{
+  width: 300px;
+  height: 70px;
+}
+.edit-fe-div-bigger{
+  position: relative;
+  width: 80%;
+  height: 13%;  
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.edit-fe-new{
+  display: flex;
+  width: 80%;
+  height: 3%;
+  margin-top: 20px;
+  margin-left: 75%;
+  
+}
+.edit-fe-span{  
+  text-decoration-style: dashed;
+  cursor: pointer;
+  color: #09f;
+}
+.edit-fe-span:hover{
+  color: #cd4a4c;
+}
+.edit-button{
+  display: block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-size: 16px;
+  color :#fff;
+  background-color: #0071f0;
+  outline: none;
+  cursor: pointer;  
+  margin:0 auto;
+  margin-top: 50px
+}
+.edit-button:focus{
+  outline: none;
+  box-shadow: 0 0 25px #008cf0;
+}
+.edit-button:hover{
+  background-color: #0e2f52;
 }
