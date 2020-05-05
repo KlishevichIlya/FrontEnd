@@ -125,8 +125,6 @@ main{
     margin-left: 100px;
     width: 800px;
     height: 450px;
-
-
 }
 .portfolios{
   display: flex;
@@ -330,7 +328,7 @@ footer{
 }
 .edit-form{
   width: 1000px;
-  height: 2600px;
+  height: 2800px;
   margin:0 auto;
   margin-top: 50px;
   background: #ffffff;
@@ -462,7 +460,7 @@ footer{
 
 .edit-forms-exp{
   width: 80%;
-  height: 30%;
+  height: 35%;
   border: 2px solid #ccc;
   margin: 0 auto;
   border-radius: 10px 10px 10px 10px;
@@ -535,7 +533,7 @@ footer{
   outline: none;
   cursor: pointer;  
   margin:0 auto;
-  margin-top: 50px
+  margin-top: 30px
 }
 .edit-button:focus{
   outline: none;
@@ -544,3 +542,141 @@ footer{
 .edit-button:hover{
   background-color: #0e2f52;
 }
+@media screen and (max-device-width: 414px){
+  body{
+    display: flex; 
+    flex-direction: column;    
+    min-width: 400px;
+    min-height: 1600px;
+  }
+  header{
+    margin: 0 auto;
+    display: flex;
+    background-color: #333; 
+    width: 400px;
+    height: 78px;
+  }
+  #main-nav-item{
+    margin-left: 30px;
+  }
+  #logout-nav-item{
+    margin-left: 30px;    
+  }
+  #exit{
+    height: 50px;
+    width: 75px;
+    background-image: url('images/exit.png');
+    background-position: 50% 92%;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+  }
+  .main-phrase {  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  background: linear-gradient(to top left, powderblue, pink);
+  border-radius: 30px;
+  width: 370px;
+  height: 100px;
+  
+  } 
+  .main-phrase h1:before {
+  display: none;   
+  }
+  .main-phrase h1 {
+  display: inline-block;
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  color: #e34234;
+  font-size: 40px;
+  font-weight: normal;
+  padding:; 
+  border-top: none;
+  border-left: none;    
+  }
+  aside{
+    display: none;
+  }
+  main{
+    display: flex;        
+    margin-left: 0;
+    margin:0 auto;
+    width: 380px;
+    height: 1300px;
+    justify-content: center;    
+  }
+
+  .without-list-type{
+  list-style-type: none; 
+  height: 250px;
+  width: 340px;
+  }
+  .portfolios{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap; 
+  align-items: center; 
+  margin: 0 auto;
+  padding: 0;
+  width: 95%;
+  height: 100%;
+  }
+  footer{
+  display: flex;
+  height: 75px;
+  width: 100%;
+  border-top: 1px solid #e6948a;
+  align-items: center;
+  justify-content: center;
+  }
+  .container{
+  display: flex;
+  justify-content: row;
+  height: 1400px;
+  }
+
+  .edit-body{
+    display: flex; 
+    flex-direction: column;    
+    min-width: 400px;
+    min-height: 2450px;
+  }
+  
+  .edit-main{
+  height: 1300px;
+  width: 380px;
+  margin: 0 auto;
+  }
+  .edit-form{
+  width: 380px;
+  height: 2300px;
+  margin:0 auto;
+  margin-top: 50px;
+  background: #ffffff;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0 4px 16px #ccc;
+  }
+  .edit-box{
+  position: relative;
+  width: 360px;  
+  margin-left: 10px;
+  margin-top: 50px;
+  }
+  .edit-forms-exp{
+  width: 90%;
+  height: 40%;
+  }
+  .edit-fe-label{
+    margin-bottom: 15px;
+  }
+  .edit-fe-textarea{
+  width: 250px;
+  height: 70px;
+  }
+
+  }
