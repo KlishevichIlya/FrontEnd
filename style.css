@@ -8,8 +8,8 @@ header{
 body {
   display: flex; 
   flex-direction: column;
-  min-width: 1230px;
-  
+  min-width: auto;
+  margin: 0;
  
 }
 
@@ -47,7 +47,7 @@ body {
 
 }
 nav {
-  width: 50%;
+  width: auto;
 }
 header ul{
     display: flex;
@@ -78,8 +78,8 @@ header li a:hover{
 }
 .container{
   display: flex;
-  justify-content: row;
-  height: 700px;
+  justify-content: center;
+  height: auto;
 }
 
 
@@ -124,7 +124,8 @@ main{
     flex-wrap: wrap;    
     margin-left: 100px;
     width: 800px;
-    height: 450px;
+    height: auto;
+    margin-bottom: 30px;
 }
 .portfolios{
   display: flex;
@@ -134,7 +135,8 @@ main{
 }
 
 .without-list-type{
-  list-style-type: none;    
+  list-style-type: none; 
+
 }
 .without-text-decoration{
   text-decoration: none;
@@ -143,8 +145,9 @@ main{
 .card-create{  
   position: relative;
   margin-top: 35px;
+  
   margin-left: 45px;   
-  margin-right: 60px;
+  margin-right: 45px;
   background: linear-gradient(90deg, #b9deed, #efefef);
   width: 265px;
   height: 180px;    
@@ -178,8 +181,10 @@ main{
 .card-info{
   display: grid;
   margin-top: 35px;
+
   margin-left: 45px;  
-  margin-right: 60px;
+  margin-right: 45px;
+  /*margin:0 auto;*/
   background: linear-gradient(90deg, #b9deed, #efefef);
   width: 265px;
   height: 180px;
@@ -318,8 +323,9 @@ footer{
   display: flex; 
   flex-direction: column;
   background: #b9deed;
-  min-width: 1230px;
-  min-height: 1000px;
+  width: auto;
+  height: auto;
+  margin: 0;
 }
 .edit-main{
   height: 100%;
@@ -328,9 +334,10 @@ footer{
 }
 .edit-form{
   width: 1000px;
-  height: 2800px;
+  height: auto;
   margin:0 auto;
   margin-top: 50px;
+  padding-bottom: 20px;
   background: #ffffff;
   border-radius: 10px 10px 10px 10px;
   box-shadow: 0 4px 16px #ccc;
@@ -389,11 +396,11 @@ footer{
 
 .edit-input{
   width: 100%;
-  padding: 0 0 10px 0;
+  padding: 0 ;
   border: none;
   border-bottom: 1px solid #e0e0e0;
   background-color: transparent;
-  margin-top: 20px;
+  margin-top: 15px;
   outline: none;
 }
 .edit-label{
@@ -401,6 +408,7 @@ footer{
   top: 0;
   left: 0;
   color: #9e9e9e;
+  margin-top: 5px;
 }
 .edit-input:focus{
   border-bottom: 1px solid #1a73a8;
@@ -460,7 +468,8 @@ footer{
 
 .edit-forms-exp{
   width: 80%;
-  height: 35%;
+  height: auto;
+  padding-bottom: 20px;
   border: 2px solid #ccc;
   margin: 0 auto;
   border-radius: 10px 10px 10px 10px;
@@ -469,7 +478,7 @@ footer{
 .edit-fe-div{
   position: relative;
   width: 80%;
-  height: 10%;  
+  height: auto;  
   margin: 0 auto;
   margin-top: 20px;
 }
@@ -479,7 +488,7 @@ footer{
   font-size:17px;
   color: #cd4a4c;
   width: 230px;
-  margin-right: 50px;
+  margin-bottom:5px;
 
 }
 .edit-fe-select{
@@ -533,7 +542,7 @@ footer{
   outline: none;
   cursor: pointer;  
   margin:0 auto;
-  margin-top: 30px
+  margin-top:20px;
 }
 .edit-button:focus{
   outline: none;
@@ -546,21 +555,23 @@ footer{
   body{
     display: flex; 
     flex-direction: column;    
-    min-width: 400px;
-    min-height: 1600px;
+    width: auto;
+    height: auto;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
   }
-  header{
-    margin: 0 auto;
+  header{   
     display: flex;
     background-color: #333; 
-    width: 400px;
+    width: 100%;
     height: 78px;
   }
   #main-nav-item{
-    margin-left: 30px;
+    margin-left: 0px;
   }
   #logout-nav-item{
-    margin-left: 30px;    
+    margin-left: 0px;    
   }
   #exit{
     height: 50px;
@@ -604,27 +615,31 @@ footer{
   }
   main{
     display: flex;        
-    margin-left: 0;
-    margin:0 auto;
+    margin:0;
     width: 380px;
-    height: 1300px;
-    justify-content: center;    
+    height: auto;
+    justify-content: center; 
+    margin-bottom: 20px;   
+  }
+  .card-create,
+  .card-info{
+    margin: 0 auto;
+  }
+  .without-list-type{
+    margin-top: 25px;
   }
 
-  .without-list-type{
-  list-style-type: none; 
-  height: 250px;
-  width: 340px;
-  }
+
   .portfolios{
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap; 
   align-items: center; 
+  justify-content: center;
   margin: 0 auto;
   padding: 0;
   width: 95%;
-  height: 100%;
+  height: auto;
   }
   footer{
   display: flex;
@@ -637,24 +652,24 @@ footer{
   .container{
   display: flex;
   justify-content: row;
-  height: 1400px;
+  height: auto;
   }
-
+/*????????????????????????????????????????????????*/
   .edit-body{
     display: flex; 
     flex-direction: column;    
-    min-width: 400px;
-    min-height: 2450px;
+    width: 100%;
+    height: auto;
   }
   
   .edit-main{
-  height: 1300px;
+  height: auto;
   width: 380px;
   margin: 0 auto;
   }
   .edit-form{
-  width: 380px;
-  height: 2300px;
+  width: 100%;
+  height: auto;
   margin:0 auto;
   margin-top: 50px;
   background: #ffffff;
@@ -669,7 +684,7 @@ footer{
   }
   .edit-forms-exp{
   width: 90%;
-  height: 40%;
+  height: auto;
   }
   .edit-fe-label{
     margin-bottom: 15px;
@@ -678,5 +693,61 @@ footer{
   width: 250px;
   height: 70px;
   }
-
+  .edit-label{
+    margin-top: 10px;
+  }
+  .edit-form{
+    margin-bottom: 20px;
+  }
+  }
+  /*??????????????????????????????*/
+  @media screen and (min-device-width: 735px) and (max-device-height:414px){
+  html{
+    width: 100%;
+    height: auto;
+  }
+  body{
+    margin:0;
+  }
+  .main-phrase{
+    margin-left: 0px;
+    width: auto;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  aside{
+    display: none;
+  }
+  main{
+    margin-left: 0;
+    width: 700px;
+    justify-content: center;
+  }
+  .portfolios{
+    padding: 0;
+    justify-content: center;
+  }
+  .card-create,
+  .card-info{
+    margin: 0 auto;
+  }
+  .without-list-type{
+    margin-right: 25px;
+    margin-top: 25px;
+  }
+  /*???????????????????????????????????????*/
+  .edit-form{
+    width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .edit-box{
+    width: 400px;
+    margin-left: 80px;
+    margin-top: 50px;
+  }
+  .edit-fe-label{
+    margin-right: 0;
+  }
   }
