@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="shortcut icon" href="icon/edit.ico">
+	<script src="app.js"></script>
 </head>
 <body class="edit-body">
 	<header>
@@ -78,6 +79,7 @@
 			<div>
 				<h2 class="edit-text">Опыт работы</h2>
 			</div>
+			<div id = "formWork">
 			<div class="edit-forms-exp">
 				<div class="edit-fe-div">
 					<label class="edit-fe-label" for="idstart">Начало работы</label><br>
@@ -135,9 +137,12 @@
 					<label class="edit-fe-label" for="idinform">О себе</label><br>					
 					<textarea class="edit-fe-textarea" id="idinform" rows="5" name="textarea"></textarea>
 				</div>
-				<button class="edit-button">Добавить</button>
+				<!-- <button class="edit-button" id = "buttonForm">Добавить</button> -->
 				
 			</div>
+			</div>
+			<button class="edit-button" id = "buttonForm">Добавить</button>
+			
 			<button class="edit-button">Сохранить</button>
 	</form>
 </main>

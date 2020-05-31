@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<title>Моё портфолио</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="shortcut icon" href="icon/mainico.ico">
-</head>
-<body>	
-	<header>
+const main = `<header>
 		<div class="header-logo"></div>
 		<nav>
 			<ul>
 				<li id="main-nav-item" lang="ru">
-					<a id = "portfolio" href="main.html">Портфолио</a>
+					<a id = "portfolio" onclick="onNavigate('/login')">Портфолио</a>
 				</li>
 				<li id="logout-nav-item" lang="ru">
-					<a id = "exit" href="enter.html">Выход</a>
+					<a id = "exit">Выход</a>
 				</li>
 
 			</ul>
@@ -34,17 +24,17 @@
 		<p>Иванов Иван</p>
 		<p>01.01.1999</p>
 	</aside>
-	<main>	
-		<ul class="portfolios">
+	<main class="stylemain">	
+		<ul class="portfolios" id = "listContainer">
 			<li class="without-list-type">
-				<a href="#6666">
+				<a id = "createList">
 					<div class="card-create">
 						<img class="creator-link" src="images/add_info.png" alt="">
 					</div>
 				</a>
 			</li>
 			<li class="without-list-type">
-				<a class="without-text-decoration" href="#7777">
+				<a class="without-text-decoration" onclick = "onNavigate('/edit')">
 					<div class="card-info">
 						<img class = "item-img" src="images/avatar.png">
 						<p class="item-name text ellipsis"><span>Портфолио Google</span></p>
@@ -83,7 +73,7 @@
 					</div>
 				</a>
 			</li>
-			<li class="without-list-type">
+			<!-- <li class="without-list-type">
 				<a class = "without-text-decoration" href="#2222">
 					<div class="card-info">
 						<img class = "item-img" src="images/avatar.png">
@@ -92,7 +82,7 @@
 						<p class = "item-desc text usual">Это мое портфолио специально для Павла Дурова</p>
 					</div>
 				</a>
-			</li>
+			</li> -->
 
 			
 		</ul>		
@@ -109,7 +99,5 @@
 		<a href="https://github.com/KlishevichIlya" target="_blank">
 			<img class="footer-img" src="images/cat.png" alt="">
 		</a>
-	</footer>
-	
-</body>
-</html>
+	</footer>	
+</body>`;
