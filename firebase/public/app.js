@@ -1,41 +1,41 @@
 const routes = {
     '/': log,
-    '/login':log,
-    '/reg':reg,
-    '/main':main, 
-    '/edit':edit
+    '/login': log,
+    '/reg': reg,
+    '/main': main,
+    '/edit': edit
 };
 
-const specRoutes ={
-    '/main':main, 
-    '/edit':edit
+const specRoutes = {
+    '/main': main,
+    '/edit': edit
 };
 
 
 const scripts = {
-    '/':'login.js',
-    '/login':'login.js',
-    '/reg':'registration.js',
-    '/main':'addList.js',
-    '/edit':'addForm.js'
-    
+    '/': 'login.js',
+    '/login': 'login.js',
+    '/reg': 'registration.js',
+    '/main': 'addList.js',
+    '/edit': 'addForm.js'
+
 };
 
 let listContainer;
 let signOutBtn;
-let idrrr;
+
 let div;
 let myId;
 let pushBtn;
 
-function getPathWithoutParams(pathname){    
-    let startParamsIndex = pathname.indexOf('?');   
-    if(startParamsIndex != -1)
+function getPathWithoutParams(pathname) {
+    let startParamsIndex = pathname.indexOf('?');
+    if (startParamsIndex != -1)
         return pathname.slice(0, startParamsIndex);
     return pathname;
 }
 
-function addScript(pathname){
+function addScript(pathname) {
     let scriptSrc = scripts[pathname];
     let script = document.createElement('script');
     script.src = scriptSrc;
@@ -44,39 +44,38 @@ function addScript(pathname){
 
 }
 
-async function addContent(pathname,id){
-    pathname = getPathWithoutParams(pathname);  
+async function addContent(pathname, id) {
+    pathname = getPathWithoutParams(pathname);
 
     firebase.auth().onAuthStateChanged(firebaseuser => {
-        
-        if(pathname in specRoutes && !firebaseuser){ 
-        onNavigate('/login');
-        return;
-    }
-        if(pathname in routes){
-            content.innerHTML = routes[pathname];       
-            if(pathname in scripts)
+
+        if (pathname in specRoutes && !firebaseuser) {
+            onNavigate('/login');
+            return;
+        }
+        if (pathname in routes) {
+            content.innerHTML = routes[pathname];
+            if (pathname in scripts)
                 addScript(pathname);
-        }   
-        if(pathname == '/edit'){
-            let div =  document.createElement('div');
+        }
+        if (pathname == '/edit') {
+            let div = document.createElement('div');
             div.id = 'sendId';
-            div.setAttribute('portId',id);
+            div.setAttribute('portId', id);
             content.appendChild(div);
         }
-    });       
+    });
 }
 
 
 
-const onNavigate = (pathname,id) =>{
-    window.history.pushState(
-        {},
+const onNavigate = (pathname, id) => {
+    window.history.pushState({},
         'Some text',
-        window.location.origin + pathname);  
-        console.log('&&&&');
-        console.log(id);
-    addContent(pathname,id);
+        window.location.origin + pathname);
+    console.log('&&&&');
+    console.log(id);
+    addContent(pathname, id);
 }
 
 window.onpopstate = () => {
@@ -86,15 +85,6 @@ window.onpopstate = () => {
 const content = document.getElementById('contentchanger');
 
 addContent(window.location.pathname);
-
-
-
-
-
-
-
-
-
 
 
 
@@ -137,6 +127,6 @@ addContent(window.location.pathname);
 //             }
 
 //             document.body.innerHTML = doc.querySelector('p-body').innerHTML;
-            
+
 //         })  
 // }

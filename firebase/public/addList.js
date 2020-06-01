@@ -1,15 +1,11 @@
 // const doc = document;
-
- listContainer = document.getElementById("listContainer");
+listContainer = document.getElementById("listContainer");
 
 
 
 signOutBtn = document.getElementById('exit');
 
 signOutBtn.addEventListener('click', () => {
-    console.log('pidr');
-    // event.preventDefault();
-    // console.log(firebase.auth().currentUser.email);
     firebase.auth().signOut()
         .then(() => {
             onNavigate('/login');
@@ -21,19 +17,20 @@ signOutBtn.addEventListener('click', () => {
 
 })
 
- function clickHandler(event) { 
- 	// let id;
- 	console.log(event.target.tagName)
- 	if(event.target.tagName === 'DIV'){
- 	console.log('ppppppppp')
-	// console.log(event.target.parentNode);		
-	let elem = event.target;
-	idrrr = elem.getAttribute("data-href");
-	console.log(idrrr);
-	onNavigate('/edit',idrrr);
- 	}
- 
-	
+
+function clickHandler(event) {
+    console.log(event.target.tagName)
+    if (event.target.tagName === 'DIV') {
+        console.log('ppppppppp')
+        console.log(event.target.parentNode);
+        let elem = event.target;
+        console.log(elem)
+        let id = elem.getAttribute("data-href");
+        console.log(id);
+        onNavigate('/edit', id);
+    }
+
+
 }
 
 
@@ -56,7 +53,6 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
             if (snapshot.exists()) {
                 let mass = Object.values(listPortf);
-                	// data-href = "${portfolio.form.idEdit}"
                 let temp = mass.map(portfolio => `<li class="without-list-type" >
 			<a class="without-text-decoration">
 					<div class="card-info" data-href = "${portfolio.form.idEdit}">
@@ -65,17 +61,22 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 						<p class = "item-date text small">Создано:` + portfolio.createDay + " " + portfolio.createMonth + " " + portfolio.createYear + `</p>
 						<p class = "item-desc text usual">${portfolio.store}</p>
 					</div>
-				</a></li>`).join('');				
+				</a></li>`).join('');
                 listContainer.innerHTML += addButton;
-                listContainer.innerHTML += temp;                
+                listContainer.innerHTML += temp;
+
 
             } else {
                 listContainer.innerHTML += addButton;
             }
-            listContainer.addEventListener('click',clickHandler);
+            console.log('hhhhhhhh')
+            console.log(listContainer)
+            listContainer.addEventListener('click', clickHandler);
 
             const createBtn = document.getElementById("createList");
-            createBtn.addEventListener('click', function() {
+            console.log(createBtn)
+            createBtn.addEventListener('click', function(event) {
+                event.stopPropagation();
                 console.log("!!!!!!!!!!!!!");
                 let portfolioLi = document.createElement('li');
                 let date = new Date();
@@ -90,7 +91,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
                 }
                 let id = randomInteger(1, 100);
                 let uniqId = id + (new Date()).getTime();
-               
+
                 console.log(uniqId);
                 let store = 'Ваше новое портфолио';
                 switch (month) {
@@ -142,11 +143,14 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 						<p class = "item-date text small">Создано:` + day + " " + fMonth + " " + year + `</p>
 						<p class = "item-desc text usual">${store}</p>
 					</div>
-				</a>`;	
-				console.log(portfolioLi)		
+				</a>`;
+                console.log('[[[[[[')
+                console.log(uniqId)
+                console.log(portfolioLi);
+
                 listContainer.appendChild(portfolioLi);
-                portfolioLi.addEventListener('click', clickHandler);	
-                console.log(firebase);
+
+                // console.log(firebase);
                 let creator = firebase.auth().currentUser.email;
 
                 let db = firebase.database();
