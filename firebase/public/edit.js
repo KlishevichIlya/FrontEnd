@@ -23,23 +23,23 @@ const edit =  `<body class="edit-body">
 				<h2 class="edit-text">Личная информация</h2>
 			</div>
 			<div class="edit-box">
-				<input class="edit-input big-letter" id="idsurname" type="text" name="surname" placeholder="Иванов">
+				<input class="edit-input big-letter" id="idsurname" type="text" name="surname" placeholder="Иванов" required>
 				<label class="edit-label" for="idsurname">Фамилия</label>
 			</div>
 			<div class="edit-box">
-				<input class="edit-input big-letter" id="idname" type="text" name="name" placeholder="Иван">
+				<input class="edit-input big-letter" id="idname" type="text" name="name" placeholder="Иван" required>
 				<label class="edit-label" for="idname">Имя</label>
 			</div>
 			<div class="edit-box">
-				<input class="edit-input big-letter" id="idpatronymic" type="text" name="patronymic" placeholder="Иванович">
+				<input class="edit-input big-letter" id="idpatronymic" type="text" name="patronymic" placeholder="Иванович" required>
 				<label class="edit-label" for="idpatronymic">Отчество</label>
 			</div>
 			<div class="edit-box">
-				<input class="edit-input" type="date" id="idbirth" name="date-of-birthaday">
+				<input class="edit-input" type="date" id="idbirth" name="date-of-birthaday" required>
 				<label class="edit-label" for="idbirth">Дата рождения</label>
 			</div>
 			<div class="edit-box">
-				<input class="edit-input big-letter" id="idcitiz" type="text" name="citizenship" placeholder="Белорус">
+				<input class="edit-input big-letter" id="idcitiz" type="text" name="citizenship" placeholder="Белорус" required>
 				<label class="edit-label" for="idcitiz">Гражданство</label>
 			</div>
 			<div class="edit-box">
@@ -59,11 +59,11 @@ const edit =  `<body class="edit-body">
 				<h2 class="edit-text">Контактная информация</h2>
 			</div>
 			<div class="edit-box">
-				<input class="edit-input" id="idmail" type="text" name="mail" placeholder="ivanov.ivan@gmail.com">
+				<input class="edit-input" id="idmail" type="text" name="mail" placeholder="ivanov.ivan@gmail.com" required>
 				<label class="edit-label" for="idmail">Почта</label>
 			</div>
 			<div class="edit-box">
-				<input class="edit-input" id="idtext" type="tel" name="number-phone" pattern="\+375\-[0-9]{2}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}">
+				<input class="edit-input" id="idtext" type="tel" name="number-phone" required>
 				<label class="edit-label" for="idtext">Телефон</label>
 			</div>
 			<div>
@@ -131,7 +131,7 @@ const edit =  `<body class="edit-body">
 				
 			</div>
 			</div>
-			<button class="edit-button" id = "buttonForm23" type="button">Добавить</button>
+			
 			
 			<button class="edit-button" id = "buttondSend" type="submit">Сохранить</button>
 	</form>

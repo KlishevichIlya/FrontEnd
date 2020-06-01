@@ -25,7 +25,12 @@ const regBt = document.getElementById('btnCreate');
             }
             console.log(error);
         })
-        let db = firebase.firestore();
-        db.collection("users").doc(email).set({email:email,password:password});
+        let uid = firebase.auth().currentUser.uid;
+        let db = firebase.database();
+        db.ref('users/' + uid).set({
+            uid : uid,
+            email : email,
+            password: password
+        });
       
     });

@@ -6,10 +6,10 @@ const routes = {
     '/edit':edit
 };
 
-// const specRoutes ={
-//     '/main':main, 
-//     '/edit':edit
-// };
+const specRoutes ={
+    '/main':main, 
+    '/edit':edit
+};
 
 
 const scripts = {
@@ -18,9 +18,15 @@ const scripts = {
     '/reg':'registration.js',
     '/main':'addList.js',
     '/edit':'addForm.js'
+    
 };
 
-
+let listContainer;
+let signOutBtn;
+let idrrr;
+let div;
+let myId;
+let pushBtn;
 
 function getPathWithoutParams(pathname){    
     let startParamsIndex = pathname.indexOf('?');   
@@ -30,39 +36,47 @@ function getPathWithoutParams(pathname){
 }
 
 function addScript(pathname){
-    var scriptSrc = scripts[pathname];
-    var script = document.createElement('script');
+    let scriptSrc = scripts[pathname];
+    let script = document.createElement('script');
     script.src = scriptSrc;
     content.appendChild(script);
 
 
 }
 
-async function addContent(pathname){
-    // pathname = getPathWithoutParams(pathname);  
-    // if(pathname in specRoutes && firebase.auth().currentUser == null){        
-    //     alert('Сначала необходимо войти или зарегестрироваться');
-    //     onNavigate('/login');
-    //     return;
-    // }
+async function addContent(pathname,id){
+    pathname = getPathWithoutParams(pathname);  
 
-    if(pathname in routes){
-        content.innerHTML = routes[pathname];       
-        if(pathname in scripts)
-            addScript(pathname);
-    }   
+    firebase.auth().onAuthStateChanged(firebaseuser => {
+        
+        if(pathname in specRoutes && !firebaseuser){ 
+        onNavigate('/login');
+        return;
+    }
+        if(pathname in routes){
+            content.innerHTML = routes[pathname];       
+            if(pathname in scripts)
+                addScript(pathname);
+        }   
+        if(pathname == '/edit'){
+            let div =  document.createElement('div');
+            div.id = 'sendId';
+            div.setAttribute('portId',id);
+            content.appendChild(div);
+        }
+    });       
 }
 
 
 
-const onNavigate = (pathname) =>{
+const onNavigate = (pathname,id) =>{
     window.history.pushState(
         {},
         'Some text',
         window.location.origin + pathname);  
-        // console.log(pathname);
-        // console.log(window.location.origin);
-    addContent(pathname);
+        console.log('&&&&');
+        console.log(id);
+    addContent(pathname,id);
 }
 
 window.onpopstate = () => {

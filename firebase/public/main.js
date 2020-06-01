@@ -33,58 +33,7 @@ const main = `<header>
 					</div>
 				</a>
 			</li>
-			<li class="without-list-type">
-				<a class="without-text-decoration" onclick = "onNavigate('/edit')">
-					<div class="card-info">
-						<img class = "item-img" src="images/avatar.png">
-						<p class="item-name text ellipsis"><span>Портфолио Google</span></p>
-						<p class = "item-date text small">Создано: 02.02.2019</p>
-						<p class = "item-desc text usual">Это мое портфолио специально для Сергея Брина</p>
-					</div>
-				</a>
-			</li>
-			<li class="without-list-type">
-				<a class = "without-text-decoration" href="#8888">
-					<div class="card-info">
-						<img class = "item-img" src="images/avatar.png">
-						<p class="item-name text ellipsis"><span>Портфолио Facebook</span></p>
-						<p class = "item-date text small">Создано: 03.03.2019</p>
-						<p class = "item-desc text usual">Это мое портфолио специально для Марка Цукерберга</p>
-					</div>
-				</a>
-			</li>
-			<li class="without-list-type">
-				<a class = "without-text-decoration" href="#9999">
-					<div class="card-info">
-						<img class = "item-img" src="images/avatar.png">
-						<p class="item-name text ellipsis"><span>Портфолио Apple</span></p>
-						<p class = "item-date text small">Создано: 02.04.2020</p>
-						<p class = "item-desc text usual">Это мое портфолио специально для Тима Кука</p>
-					</div>
-				</a>
-			</li>
-			<li class="without-list-type">
-				<a class = "without-text-decoration" href="#1111">
-					<div class="card-info">
-						<img class = "item-img" src="images/avatar.png">
-						<p class="item-name text ellipsis"><span>Портфолио Tesla</span></p>
-						<p class = "item-date text small">Создано: 01.12.2019</p>
-						<p class = "item-desc text usual">Это мое портфолио специально для Илона Маска</p>
-					</div>
-				</a>
-			</li>
-			<!-- <li class="without-list-type">
-				<a class = "without-text-decoration" href="#2222">
-					<div class="card-info">
-						<img class = "item-img" src="images/avatar.png">
-						<p class="item-name text ellipsis"><span>Портфолио Telegram</span></p>
-						<p class = "item-date text small">Создано: 10.12.2017</p>
-						<p class = "item-desc text usual">Это мое портфолио специально для Павла Дурова</p>
-					</div>
-				</a>
-			</li> -->
-
-			
+						
 		</ul>		
 		
 	</main>
@@ -101,3 +50,15 @@ const main = `<header>
 		</a>
 	</footer>	
 </body>`;
+
+// async function updateList(){
+// 	let db = firebase.database();
+// 	let user;
+// 	if(firebase.auth().currentUser)
+// 		user =  firebase.auth().currentUser.uid
+// 	let portfolios = await db.ref('/users'+user+'/currentPortfolio').once("value");
+// 	console.log('/users'+ '/' +user+'/currentPortfolio');
+// 	let listPortf = portfolios.val();
+// 	// console.log(listPortf);
+// }
+
